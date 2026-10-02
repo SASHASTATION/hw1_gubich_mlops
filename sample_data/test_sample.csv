@@ -1,0 +1,6 @@
+transaction_id,transaction_time,amount,lat,lon,merchant_lat,merchant_lon,population_city,dob,gender,merch,cat_id,one_city,us_state,jobs
+tx_normal_1,2025-05-01 14:10:00,42.50,40.7128,-74.0060,40.7306,-73.9352,8804190,1990-02-15,F,merchant_a,food,New York,NY,engineer
+tx_normal_2,2025-05-02 09:30:00,110.00,34.0522,-118.2437,34.0407,-118.2468,3820914,1985-07-10,M,merchant_b,grocery,Los Angeles,CA,manager
+tx_suspicious_1,2025-05-03 02:15:00,4500.00,40.7128,-74.0060,34.0522,-118.2437,8804190,1998-11-03,F,merchant_c,electronics,New York,NY,student
+tx_normal_3,2025-05-04 18:45:00,75.00,41.8781,-87.6298,41.8818,-87.6232,2664452,1975-04-20,M,merchant_d,transport,Chicago,IL,teacher
+tx_suspicious_2,2025-05-05 23:40:00,3200.00,47.6062,-122.3321,25.7617,-80.1918,755078,1995-09-09,F,merchant_e,travel,Seattle,WA,designer
