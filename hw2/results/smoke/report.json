@@ -1,0 +1,160 @@
+{
+  "csv_files": [
+    "sample.csv"
+  ],
+  "transactions": 5,
+  "states": 3,
+  "verification": "both SQL queries match independent CSV reference",
+  "clickhouse_version": "25.3.6.56",
+  "benchmark": {
+    "baseline": {
+      "client_median_ms": 2.313291000064055,
+      "client_runs_ms": [
+        2.508499999976266,
+        2.368917000012516,
+        2.313291000064055,
+        2.2470420000217928,
+        2.0364169999993464
+      ],
+      "server_runs": [
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "564",
+          "memory_usage": "4241738"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "564",
+          "memory_usage": "4242618"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "564",
+          "memory_usage": "4237570"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "564",
+          "memory_usage": "4241594"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "564",
+          "memory_usage": "4242618"
+        }
+      ]
+    },
+    "optimized": {
+      "client_median_ms": 2.8614579999839407,
+      "client_runs_ms": [
+        3.8835000000290165,
+        3.2983749999857537,
+        2.8614579999839407,
+        2.060457999959908,
+        1.7422910000277625
+      ],
+      "server_runs": [
+        {
+          "query_duration_ms": "2",
+          "read_rows": "3",
+          "read_bytes": "453",
+          "memory_usage": "4238146"
+        },
+        {
+          "query_duration_ms": "2",
+          "read_rows": "3",
+          "read_bytes": "453",
+          "memory_usage": "4240882"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "3",
+          "read_bytes": "453",
+          "memory_usage": "4234778"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "3",
+          "read_bytes": "453",
+          "memory_usage": "4234330"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "3",
+          "read_bytes": "453",
+          "memory_usage": "4232650"
+        }
+      ]
+    },
+    "unoptimized_storage": {
+      "client_median_ms": 2.161208999950759,
+      "client_runs_ms": [
+        1.8192920000501545,
+        1.9560829999818452,
+        3.390041999978166,
+        2.161208999950759,
+        2.178333000074417
+      ],
+      "server_runs": [
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "558",
+          "memory_usage": "4240716"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "558",
+          "memory_usage": "4238924"
+        },
+        {
+          "query_duration_ms": "2",
+          "read_rows": "5",
+          "read_bytes": "558",
+          "memory_usage": "4244852"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "558",
+          "memory_usage": "4240140"
+        },
+        {
+          "query_duration_ms": "1",
+          "read_rows": "5",
+          "read_bytes": "558",
+          "memory_usage": "4241076"
+        }
+      ]
+    }
+  },
+  "storage": [
+    {
+      "table": "state_max",
+      "rows": "3",
+      "bytes_on_disk": "460",
+      "compressed_bytes": "360",
+      "uncompressed_bytes": "362"
+    },
+    {
+      "table": "transactions",
+      "rows": "5",
+      "bytes_on_disk": "1345",
+      "compressed_bytes": "809",
+      "uncompressed_bytes": "1090"
+    },
+    {
+      "table": "transactions_baseline",
+      "rows": "5",
+      "bytes_on_disk": "1478",
+      "compressed_bytes": "893",
+      "uncompressed_bytes": "1026"
+    }
+  ]
+}

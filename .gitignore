@@ -1,0 +1,8 @@
+teta-ml-1-2025/
+hw2/data/*.csv
+!hw2/data/sample.csv
+__pycache__/
+*.pyc
+.venv/
+.DS_Store
+.env
